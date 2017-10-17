@@ -64,6 +64,10 @@ label {
   flex: 1 50%;
   line-height: 1.25rem;
 }
+.form-footer {
+  margin-top: 4rem;
+  text-align: center;
+}
 .toggle {
   background-color: #000;
   border: 1px solid #3c3c3c;
@@ -82,7 +86,7 @@ label {
   color: #000;
 }
 .content-body {
-  margin-top: 4.5rem;
+  margin-top: 4rem;
 }
 .input {
   color: #555;
@@ -90,6 +94,13 @@ label {
   font-weight: 300;
   height: 5rem;
   padding: 0 1.25rem;
+}
+.input[type=submit] {
+  background-color: #ff0;
+  color: #000;
+  font-weight: 500;
+  padding: 0 3rem;
+  text-transform: uppercase;
 }
 .input-text {
   width: 37.5rem;
