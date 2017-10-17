@@ -25,10 +25,17 @@ table             {border-collapse: collapse;border-spacing: 0;}
 
 input[type=submit] {border-width: 0;}
 
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #000;
   color: #fff;
   font: 16px/16px Helvetica, Arial, sans-serif;
+}
+label {
+  display: block;
+  margin-bottom: 1rem;
 }
 
 #content {
@@ -78,8 +85,35 @@ body {
   margin-top: 4.5rem;
 }
 .input {
+  color: #555;
+  font-size: 3.5rem;
+  font-weight: 300;
   height: 5rem;
+  padding: 0 1.25rem;
 }
 .input-text {
   width: 37.5rem;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-style: oblique;
+}
+:-moz-placeholder {
+  color: #ccc;
+  font-style: oblique;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #ccc;
+  font-style: oblique;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #ccc;
+  font-style: oblique;
+}
+::-ms-input-placeholder {
+  color: #ccc;
+  font-style: oblique;
 }
