@@ -40,14 +40,17 @@ label {
 
 #content {
   margin: 0 auto;
-  padding-top: 5rem;
   width: 50vw;
 }
 #logo-wrapper {
+  padding-top: 10vh;
   text-align: center;
 }
 #logo-wrapper img {
   height: 20vh;
+}
+#screen-3 .form-body label:first-child {
+  margin-bottom: 2.25rem;
 }
 .content-body > div {
   display: none;
@@ -113,6 +116,9 @@ label {
 }
 .input-text {
   width: 50vw;
+}
+.with-error {
+  border: 3px solid #d00;
 }
 
 /* INI.select-box */
