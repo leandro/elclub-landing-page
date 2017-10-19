@@ -147,6 +147,9 @@ label {
 .input-text {
   width: 50vw;
 }
+.input-green {
+  background-color: #0f0 !important;
+}
 .with-error {
   border: 3px solid #d00;
 }
