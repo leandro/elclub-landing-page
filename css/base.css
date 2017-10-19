@@ -52,6 +52,36 @@ label {
 #screen-3 .form-body label:first-child {
   margin-bottom: 2.25rem;
 }
+#terms {
+  background-color: #555;
+  color: #fff;
+  height: 20vh;
+  margin-bottom: 1.5rem;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+#terms p {
+  font-size: .75rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-transform: uppercase;
+}
+#terms p:last-child {
+  margin-bottom: 0;
+}
+#terms-acceptance {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-transform: uppercase;
+}
+#terms-acceptance > div {
+  margin: 0 2rem;
+}
+#terms-acceptance input {
+  margin-right: .5rem;
+}
 .content-body > div {
   display: none;
 }
