@@ -55,7 +55,7 @@ label {
 .content-body > div.active {
   display: unset;
 }
-#form-description {
+.form-description {
   font-size: .625rem;
   text-transform: uppercase;
 }
@@ -125,7 +125,6 @@ label {
   line-height: 5rem;
   padding: 0 3rem 0 1.25rem;
   position: relative;
-  text-transform: uppercase;
   width: 100% !important;
 }
 .selectboxit-arrow-container {

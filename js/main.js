@@ -1,5 +1,5 @@
 !function($) {
-  $('select').selectBoxIt();
+  $('select').selectBoxIt({ showFirstOption: false });
   $('.registration-types .toggle').on('click', switchForms);
   $('.fake-date-field').on('focus', enableRealDateField);
   $('.fake-date-field + input').on('blur', getBackToFakeDateField);
