@@ -106,6 +106,61 @@ label {
   width: 37.5rem;
 }
 
+/* INI.select-box */
+.selectboxit-container {
+  width: 37.5rem !important;
+}
+.selectboxit {
+  background-color: #fff;
+  display: block;
+  line-height: 5rem;
+  padding: 0 3rem 0 1.25rem;
+  position: relative;
+  text-transform: uppercase;
+  width: 100% !important;
+}
+.selectboxit-arrow-container {
+  display: block;
+  height: 5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3rem;
+}
+.selectboxit-arrow {
+  color: #000;
+  display: block;
+  font-size: 1.5rem;
+  height: 100%;
+  line-height: 5rem;
+  text-align: center;
+}
+.selectboxit-arrow::after {
+  content: "▼";
+  cursor: pointer;
+}
+.selectboxit-list {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  color: #000;
+  display: none;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  min-width: unset !important;
+  position: absolute;
+  width: 37.5rem !important;
+}
+.selectboxit-focus .selectboxit-list {
+  display: unset;
+}
+.selectboxit-option {
+  padding: 0 1.25rem;
+}
+.selectboxit-option:hover {
+  background: #eee;
+}
+/* END.select-box */
+
 ::-webkit-input-placeholder {
   color: #ccc;
   font-style: oblique;
