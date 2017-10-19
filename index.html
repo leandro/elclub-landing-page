@@ -16,12 +16,12 @@
       </div>
 
       <div class="content-body">
-        <div id="screen-1">
+        <div id="screen-1" class="active">
           <form action="/">
             <div class="form-header">
-              <div id="registration-types">
+              <div class="registration-types">
                 <button class="toggle active">Desconto</button>
-                <button class="toggle">Aniversário</button>
+                <button class="toggle" data-goto="screen-2">Aniversário</button>
               </div>
 
               <div id="form-description">
@@ -49,6 +49,40 @@
             <input type="submit" class="input" value="ok" />
           </div>
         </div>
+
+        <div id="screen-2">
+          <form action="/">
+            <div class="form-header">
+              <div class="registration-types">
+                <button class="toggle" data-goto="screen-1">Desconto</button>
+                <button class="toggle active">Aniversário</button>
+              </div>
+
+              <div id="form-description">
+                Faz aniversário essa semana?</br>
+                Venha por nossa conta COM OS AMIGOS.
+              </div>
+            </div>
+          </form>
+
+          <div class="form-body">
+            <label>
+              <input type="text" name="nome" class="input input-text" placeholder="NOME" />
+            </label>
+            <label>
+              <input type="text" name="birthday-fake" class="input input-text fake-date-field" placeholder="DATA DE NASC." />
+              <input type="date" name="birthday" class="input input-text" />
+            </label>
+            <label>
+              <input type="number" name="rg" class="input input-text" placeholder="RG" />
+            </label>
+          </div>
+
+          <div class="form-footer">
+            <input type="submit" class="input" value="ok" />
+          </div>
+        </div>
+      </div>
       </div>
     </div>
 

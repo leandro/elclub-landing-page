@@ -41,10 +41,19 @@ label {
 #content {
   margin: 0 auto;
   padding-top: 5rem;
-  width: 37.5rem;
+  width: 50vw;
 }
 #logo-wrapper {
   text-align: center;
+}
+#logo-wrapper img {
+  height: 20vh;
+}
+.content-body > div {
+  display: none;
+}
+.content-body > div.active {
+  display: unset;
 }
 #form-description {
   font-size: .625rem;
@@ -103,12 +112,12 @@ label {
   text-transform: uppercase;
 }
 .input-text {
-  width: 37.5rem;
+  width: 50vw;
 }
 
 /* INI.select-box */
 .selectboxit-container {
-  width: 37.5rem !important;
+  width: 50vw !important;
 }
 .selectboxit {
   background-color: #fff;
@@ -148,7 +157,7 @@ label {
   line-height: 3.5rem;
   min-width: unset !important;
   position: absolute;
-  width: 37.5rem !important;
+  width: 50vw !important;
 }
 .selectboxit-focus .selectboxit-list {
   display: unset;
@@ -160,6 +169,16 @@ label {
   background: #eee;
 }
 /* END.select-box */
+
+.fake-date-field[disabled] {
+  display: none;
+}
+.fake-date-field + input {
+  display: none;
+}
+.fake-date-field[disabled] + input {
+  display: unset;
+}
 
 ::-webkit-input-placeholder {
   color: #ccc;
