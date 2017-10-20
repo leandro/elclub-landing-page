@@ -17,7 +17,9 @@
       </div>
 
       <div class="content-body">
-        <div id="screen-1" class="active">
+
+        <!-- INI.FORM DISCOUNT -->
+        <div id="screen-1" class="screen-item">
           <form action="/">
             <div class="form-header">
               <div class="registration-types">
@@ -51,8 +53,10 @@
             </div>
           </form>
         </div>
+        <!-- END.FORM DISCOUNT -->
 
-        <div id="screen-2">
+        <!-- INI.FORM BIRTHDAY STEP 1 -->
+        <div id="screen-2" class="screen-item">
           <form action="/">
             <div class="form-header">
               <div class="registration-types">
@@ -84,8 +88,10 @@
             </div>
           </form>
         </div>
+        <!-- END.FORM BIRTHDAY STEP 1 -->
 
-        <div id="screen-3">
+        <!-- INI.FORM BIRTHDAY STEP 2 -->
+        <div id="screen-3" class="screen-item">
           <form action="/" method="get">
             <div class="form-body">
               <label>
@@ -120,6 +126,22 @@
             </div>
           </form>
         </div>
+        <!-- END.FORM BIRTHDAY STEP 2 -->
+
+        <!-- INI.FEEDBACKS -->
+        <div id="screen-4" class="screen-item active">
+          <div id="discount-success" class="msg msg-success">
+            Nome cadastrado<br />na lista de desconto!
+          </div>
+          <div id="birthday-success" class="msg msg-success active">
+            Nomes cadastrados<br />na lista de aniversário!
+          </div>
+          <div class="back-wrapper">
+            <button class="btn js-reset-form" data-goto="screen-1">Voltar</button>
+          </div>
+        </div>
+        <!-- END.FEEDBACKS -->
+
       </div>
     </div>
 

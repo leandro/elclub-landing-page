@@ -1,6 +1,6 @@
 !function($) {
   $('select').selectBoxIt({ showFirstOption: false });
-  $('.registration-types .toggle').on('click', switchForms);
+  $('button[data-goto]').on('click', switchForms);
   $('.fake-date-field').on('focus', enableRealDateField);
   $('.fake-date-field + input').on('blur', getBackToFakeDateField);
   $('#screen-1 form').on('submit', processDiscountForm);
@@ -17,6 +17,8 @@
     if (!(nextScreen = $self.data('goto'))) return;
     $self.closest('.active').removeClass('active');
     $('#' + nextScreen).addClass('active');
+
+    if ($self.is('js-reset-form')) $('#' + nextScreen).find('form').trigger('reset');
   }
 
   function enableRealDateField(ev) {

@@ -92,6 +92,12 @@ label {
 #terms-acceptance input {
   margin-right: .5rem;
 }
+#screen-4 .msg {
+  display: none;
+}
+#screen-4 .msg.active {
+  display: block;
+}
 .content-body > div {
   display: none;
 }
@@ -156,6 +162,16 @@ label {
   padding: 0 3rem;
   text-transform: uppercase;
 }
+.btn {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 2.25rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-transform: uppercase;
+}
 .input-text {
   width: 50vw;
 }
@@ -164,6 +180,21 @@ label {
 }
 .with-error {
   border: 3px solid #d00;
+}
+.msg {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  padding: 3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.msg-success {
+  color: #0f0;
+}
+.back-wrapper {
+  text-align: center;
+  margin-top: 5rem;
 }
 
 /* INI.select-box */
