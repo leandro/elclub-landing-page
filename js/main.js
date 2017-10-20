@@ -18,7 +18,10 @@
     $self.closest('.active').removeClass('active');
     $('#' + nextScreen).addClass('active');
 
-    if ($self.is('js-reset-form')) $('#' + nextScreen).find('form').trigger('reset');
+    // it doesn't reset the form if an error occurred
+    if ($self.is('js-reset-form') && !$self.parent().prevAll('.msg-error .active').length) {
+      $('#' + nextScreen).find('form').trigger('reset');
+    }
   }
 
   function enableRealDateField(ev) {
