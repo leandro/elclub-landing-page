@@ -369,4 +369,14 @@ label {
   .back-wrapper {
     margin-top: 2rem;
   }
+  .form-header {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .form-header > div:last-child {
+    flex: 1 100%;
+    line-height: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
 }
