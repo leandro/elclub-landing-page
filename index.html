@@ -19,8 +19,8 @@
       <div class="content-body">
 
         <!-- INI.FORM DISCOUNT -->
-        <div id="screen-1" class="screen-item">
-          <form action="/">
+        <div id="screen-1" class="screen-item active">
+          <form action="/register-discount.json">
             <div class="form-header">
               <div class="registration-types">
                 <button class="toggle active">Desconto</button>
@@ -92,7 +92,7 @@
 
         <!-- INI.FORM BIRTHDAY STEP 2 -->
         <div id="screen-3" class="screen-item">
-          <form action="/" method="get">
+          <form action="/register-discount.json">
             <div class="form-body">
               <label>
                 <select name="festa" class="input input-text" placeholder="FESTA">
@@ -129,14 +129,14 @@
         <!-- END.FORM BIRTHDAY STEP 2 -->
 
         <!-- INI.FEEDBACKS -->
-        <div id="screen-4" class="screen-item active">
+        <div id="screen-4" class="screen-item">
           <div id="discount-success" class="msg msg-success">
             Nome cadastrado<br />na lista de desconto!
           </div>
           <div id="birthday-success" class="msg msg-success">
             Nomes cadastrados<br />na lista de aniversário!
           </div>
-          <div id="generic-error" class="msg msg-error active">
+          <div id="generic-error" class="msg msg-error">
             Ocorreu um erro ao<br />realizar seu cadastro
           </div>
           <div id="custom-error" class="msg msg-error"></div>
@@ -149,7 +149,7 @@
       </div>
     </div>
 
-    <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/jquery.select-box-it.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

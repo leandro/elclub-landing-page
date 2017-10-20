@@ -38,6 +38,7 @@
   function processDiscountForm(ev) {
     ev.preventDefault();
     if(pointFirstInvalidFieldIn($(this))) return;
+    makeAsyncRequest($(this), 'screen-4');
   }
 
   function goToNextBirthdayScreen(ev) {
@@ -62,6 +63,7 @@
 
     if(pointFirstInvalidFieldIn($(this))) return;
     $('#terms-acceptance input[type=hidden]').attr('disabled', true);
+    makeAsyncRequest($(this), 'screen-4');
   }
 
   function removeErrorStylesFromValidFields() {
@@ -82,6 +84,42 @@
 
     if ($input.is(':checked')) {
       $input.closest('span').removeClass('with-error');
+    }
+  }
+
+  function makeAsyncRequest(form, nextScreen) {
+    var responseHandler = asyncResponseHandler(form, nextScreen);
+
+    $.ajax({
+      url: form.attr('action'),
+      data: form.serialize(),
+      type: 'GET',
+      dataType: 'json'
+    })
+      .done(responseHandler)
+      .fail(responseHandler);
+  }
+
+  function asyncResponseHandler(form, nextScreen) {
+    return function (data) {
+      var msgId, screenEl = form.closest('.screen-item');
+      var msgMaps = { "screen-1": "discount", "screen-3": "birthday" };
+      nextScreen = $('#' + nextScreen);
+
+      $('#screen-4 .msg').removeClass('active')
+
+      if (data.success) {
+        msgId = '#' + msgMaps[screenEl.attr('id')] + '-success';
+      } else if (data.error) {
+        msgId = '#custom-error';
+        $(msgId).text(data.error);
+      } else {
+        msgId = '#generic-error';
+      }
+
+      $(msgId).addClass('active');
+      screenEl.removeClass('active');
+      nextScreen.addClass('active')
     }
   }
 
