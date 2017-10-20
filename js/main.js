@@ -8,6 +8,7 @@
   $('#screen-3 form').on('submit', processBirthdayForm);
   getRelevantFieldsFrom($('#content')).on('blur', removeErrorStylesFromValidFields);
   $('select').on('change', removeErrorStylesFromCustomSelectBoxes);
+  $('#terms-acceptance :checkbox').on('change', removeErrorStylesFromTermsCheckbox);
 
   function switchForms(ev) {
     var $self = $(this), nextScreen;
@@ -55,6 +56,7 @@
     ev.preventDefault();
 
     if(pointFirstInvalidFieldIn($(this))) return;
+    $('#terms-acceptance input[type=hidden]').attr('disabled', true);
   }
 
   function removeErrorStylesFromValidFields() {
@@ -70,6 +72,14 @@
     }
   }
 
+  function removeErrorStylesFromTermsCheckbox() {
+    var $input = $(this);
+
+    if ($input.is(':checked')) {
+      $input.closest('span').removeClass('with-error');
+    }
+  }
+
   function pointFirstInvalidFieldIn(form) {
     var invalidField = firstInvalidFieldIn(form), highlightableElement;
 
@@ -77,6 +87,8 @@
 
     if (invalidField.is('select')) {
       highlightableElement = invalidField.next().find('.selectboxit');
+    } else if (invalidField.is(':checkbox')) {
+      highlightableElement = invalidField.closest('span');
     } else {
       highlightableElement = invalidField;
     }
@@ -93,7 +105,9 @@
     getRelevantFieldsFrom(form).each(function() {
       var $input = $(this);
 
-      if (!$input.val() || $input.is('select') && $input.val() === '0') {
+      if (!$input.val() ||
+          ($input.is('select') && $input.val() === '0') ||
+          ($input.attr('name') === 'accept_terms' && !$input.is(':checked'))) {
         invalidField = $input;
         return false;
       }

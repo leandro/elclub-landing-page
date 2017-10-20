@@ -46,7 +46,7 @@
             </div>
 
             <div class="form-footer">
-              <input type="submit" class="input" value="ok" />
+              <input type="submit" class="input input-green" value="ok" />
             </div>
           </form>
         </div>
@@ -85,7 +85,7 @@
         </div>
 
         <div id="screen-3">
-          <form action="/">
+          <form action="/" method="get">
             <div class="form-body">
               <label>
                 <select name="festa" class="input input-text" placeholder="FESTA">
@@ -108,12 +108,9 @@
                 <p>A lista é válida para as festas de segunda-feira OU quinta-feira OU sexta-feira OU sábado se seu aniversário for de segunda-feira a domingo da mesma semana; se seu aniversário NÃO for na semana da festa escolhida sua lista</p>
               </div>
               <div id="terms-acceptance">
-                <div>
-                  <input type="radio" name="accept_terms" value="1" />Eu aceito
-                </div>
-                <div>
-                  <input type="radio" name="accept_terms" value="0" />Não aceito
-                </div>
+                <span>
+                  <input type="checkbox" name="accept_terms" value="1" />Eu aceito os termos acima
+                </span>
               </div>
             </div>
 
