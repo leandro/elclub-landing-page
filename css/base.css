@@ -324,7 +324,7 @@ label {
     width: 80vw !important;
   }
   .selectboxit {
-    line-height: 3rem;
+    line-height: 2.5rem;
     padding: 0 1.5rem 0 .75rem;
   }
   .selectboxit-arrow-container {
@@ -333,7 +333,7 @@ label {
   }
   .selectboxit-arrow {
     font-size: 1rem;
-    line-height: 3rem;
+    line-height: 2.5rem;
   }
   .selectboxit-list {
     font-size: 1.5rem;
@@ -343,12 +343,12 @@ label {
     padding: 0 .75rem;
   }
   .input {
-    font-size: 2rem;
-    height: 3rem;
+    font-size: 1.5rem;
+    height: 2.5rem;
     padding: 0 .75rem;
   }
   .input[type=submit] {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
   }
   .btn {
     font-size: 1.5rem;
