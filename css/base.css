@@ -44,10 +44,23 @@ label {
 }
 #logo-wrapper {
   padding-top: 10vh;
+  position: relative;
   text-align: center;
 }
 #logo-wrapper img {
   height: 20vh;
+}
+#logo-overlay {
+  background: rgba(0, 0, 0, .87);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#logo-overlay.active {
+  display: unset;
 }
 #screen-3 .form-body label:first-child {
   margin-bottom: 2.25rem;
