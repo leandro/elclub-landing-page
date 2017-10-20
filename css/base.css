@@ -48,7 +48,8 @@ label {
   text-align: center;
 }
 #logo-wrapper img {
-  height: 20vh;
+  max-height: 20vh;
+  max-width: 20vw;
 }
 #logo-overlay {
   background: rgba(0, 0, 0, .87);
@@ -173,7 +174,7 @@ label {
   text-transform: uppercase;
 }
 .input-text {
-  width: 50vw;
+  width: 100%;
 }
 .input-green {
   background-color: #0f0 !important;
@@ -202,15 +203,18 @@ label {
 
 /* INI.select-box */
 .selectboxit-container {
-  width: 50vw !important;
+  width: 100% !important;
 }
 .selectboxit {
   background-color: #fff;
   display: block;
   line-height: 5rem;
+  overflow: hidden;
   padding: 0 3rem 0 1.25rem;
   position: relative;
+  text-overflow: ellipsis;
   width: 100% !important;
+  white-space: nowrap;
 }
 .selectboxit-arrow-container {
   display: block;
@@ -229,7 +233,7 @@ label {
   text-align: center;
 }
 .selectboxit-arrow::after {
-  content: "▼";
+  content: "\25bc";
   cursor: pointer;
 }
 .selectboxit-list {
@@ -285,4 +289,84 @@ label {
 ::-ms-input-placeholder {
   color: #ccc;
   font-style: oblique;
+}
+
+@media (max-width: 1080px) {
+  #content {
+    width: 65vw;
+  }
+  .selectboxit-list {
+    width: 65vw !important;
+  }
+}
+@media (max-width: 768px) {
+  #content {
+    width: 80vw;
+  }
+  #terms {
+    height: 15vh;
+    margin-bottom: 1rem;
+    padding: .75rem;
+  }
+  #terms p {
+    font-size: .625rem;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .form-footer {
+    margin-top: 2rem;
+  }
+  .content-body {
+    margin-top: 2rem;
+  }
+  .selectboxit-list {
+    width: 80vw !important;
+  }
+  .selectboxit {
+    line-height: 3rem;
+    padding: 0 1.5rem 0 .75rem;
+  }
+  .selectboxit-arrow-container {
+    height: 3rem;
+    width: 1.5rem;
+  }
+  .selectboxit-arrow {
+    font-size: 1rem;
+    line-height: 3rem;
+  }
+  .selectboxit-list {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  .selectboxit-option {
+    padding: 0 .75rem;
+  }
+  .input {
+    font-size: 2rem;
+    height: 3rem;
+    padding: 0 .75rem;
+  }
+  .input[type=submit] {
+    padding: 0 1.5rem;
+  }
+  .btn {
+    font-size: 1.5rem;
+    padding: .5rem;
+  }
+  .toggle {
+    border-radius: .25rem;
+    font-size: .75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    padding: 0 .5rem;
+  }
+  .msg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 1.5rem 0;
+  }
+  .back-wrapper {
+    margin-top: 2rem;
+  }
 }
