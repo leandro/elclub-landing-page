@@ -17,9 +17,10 @@
     if (!(nextScreen = $self.data('goto'))) return;
     $self.closest('.active').removeClass('active');
     $('#' + nextScreen).addClass('active');
+    $('#logo-overlay').removeClass('active');
 
     // it doesn't reset the form if an error occurred
-    if ($self.is('js-reset-form') && !$self.parent().prevAll('.msg-error .active').length) {
+    if ($self.is('.js-reset-form') && !$self.parent().prevAll('.msg-error .active').length) {
       $('#' + nextScreen).find('form').trigger('reset');
     }
   }
@@ -47,7 +48,7 @@
     if(pointFirstInvalidFieldIn($(this))) return;
 
     $('#logo-wrapper').hide();
-    $('#screen-3').addClass('active');
+    $('#screen-3').addClass('active').find('input[type=hidden]').remove();
     $('#screen-2').removeClass('active');
     getRelevantFieldsFrom($(this))
       .each(function() {
@@ -64,6 +65,7 @@
     if(pointFirstInvalidFieldIn($(this))) return;
     $('#terms-acceptance input[type=hidden]').attr('disabled', true);
     makeAsyncRequest($(this), 'screen-4');
+    $('#logo-wrapper').show();
   }
 
   function removeErrorStylesFromValidFields() {
@@ -106,7 +108,7 @@
       var msgMaps = { "screen-1": "discount", "screen-3": "birthday" };
       nextScreen = $('#' + nextScreen);
 
-      $('#screen-4 .msg').removeClass('active')
+      $('#screen-4 .msg').removeClass('active');
 
       if (data.success) {
         msgId = '#' + msgMaps[screenEl.attr('id')] + '-success';
@@ -119,7 +121,8 @@
 
       $(msgId).addClass('active');
       screenEl.removeClass('active');
-      nextScreen.addClass('active')
+      nextScreen.addClass('active');
+      $('#logo-overlay').addClass('active');
     }
   }
 
