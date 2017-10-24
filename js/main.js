@@ -96,7 +96,7 @@
     $.ajax({
       url: form.attr('action'),
       data: form.serialize(),
-      type: 'GET',
+      type: form.attr('method') || 'GET',
       dataType: 'json'
     })
       .done(responseHandler)
