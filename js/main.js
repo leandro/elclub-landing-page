@@ -92,6 +92,7 @@
   function makeAsyncRequest(form, nextScreen) {
     var responseHandler = asyncResponseHandler(form, nextScreen);
 
+    showLoadingOverlay();
     $.ajax({
       url: form.attr('action'),
       data: form.serialize(),
@@ -108,11 +109,12 @@
       var msgMaps = { "screen-1": "discount", "screen-3": "birthday" };
       nextScreen = $('#' + nextScreen);
 
+      hideLoadingOverlay();
       $('#screen-4 .msg').removeClass('active');
 
-      if (data.success) {
+      if (typeof data.success !== 'function') {
         msgId = '#' + msgMaps[screenEl.attr('id')] + '-success';
-      } else if (data.error) {
+      } else if (typeof data.error !== 'function') {
         msgId = '#custom-error';
         $(msgId).text(data.error);
       } else {
@@ -124,6 +126,14 @@
       nextScreen.addClass('active');
       $('#logo-overlay').addClass('active');
     }
+  }
+
+  function showLoadingOverlay() {
+    $('#ajax-loader').addClass('active');
+  }
+
+  function hideLoadingOverlay() {
+    $('#ajax-loader').removeClass('active');
   }
 
   function pointFirstInvalidFieldIn(form) {

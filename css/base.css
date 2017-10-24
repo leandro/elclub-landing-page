@@ -292,6 +292,25 @@ label {
 .fake-date-field[disabled] + input {
   display: unset;
 }
+#ajax-loader {
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .95);
+  color: #ff0;
+  display: none;
+  flex-direction: column;
+  font-size: 3.5rem;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 1000000;
+}
+#ajax-loader.active {
+  display: flex;
+}
 
 ::-webkit-input-placeholder {
   color: #ccc;
