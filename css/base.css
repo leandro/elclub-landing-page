@@ -203,19 +203,36 @@ label {
 
 /* INI.select-box */
 .selectboxit-container {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
   width: 100% !important;
+}
+.selectboxit-container * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  outline: none;
+  white-space: nowrap;
 }
 .selectboxit {
   background-color: #fff;
+  cursor: pointer;
   display: block;
   line-height: 5rem;
   overflow: hidden;
   padding: 0 3rem 0 1.25rem;
-  position: relative;
   text-overflow: ellipsis;
   text-transform: uppercase;
   width: 100% !important;
   white-space: nowrap;
+}
+.selectboxit-option-icon-container {
+  float: left;
 }
 .selectboxit-arrow-container {
   display: block;
