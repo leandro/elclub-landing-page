@@ -276,6 +276,8 @@ label {
 }
 .selectboxit-option {
   padding: 0 1.25rem;
+  overflow-x: hidden;
+  text-overflow: hidden;
 }
 .selectboxit-option:hover {
   background-color: #666;
