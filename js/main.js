@@ -70,7 +70,7 @@
 
   function removeErrorStylesFromValidFields() {
     var $input = $(this);
-    if ($input.val()) $input.removeClass('with-error');
+    if ($input.val()) $input.add($input.siblings('.with-error')).removeClass('with-error');
   }
 
   function removeErrorStylesFromCustomSelectBoxes() {
@@ -145,6 +145,8 @@
       highlightableElement = invalidField.next().find('.selectboxit');
     } else if (invalidField.is(':checkbox')) {
       highlightableElement = invalidField.closest('span');
+    } else if (invalidField.is('[type=date]')) {
+      highlightableElement = invalidField.add(invalidField.siblings('input'));
     } else {
       highlightableElement = invalidField;
     }
