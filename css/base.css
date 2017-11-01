@@ -149,11 +149,16 @@ label {
   margin-top: 4rem;
 }
 .input {
+  appearance: none;
+  border-width: 0;
+  border-radius: 0;
   color: #555;
   font-size: 3.5rem;
   font-weight: 300;
   height: 5rem;
   padding: 0 1.25rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 .input[type=submit] {
   background-color: #ff0;
